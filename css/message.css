@@ -65,12 +65,6 @@ body {
 }
 
 /* Auto dark mode fallback (optional, since base is dark) */
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: #f0f0f0;
-    color: #1a1b26;
-  }
-}
 
 h1 {
   font-size: 4rem;
