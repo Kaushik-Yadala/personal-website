@@ -68,6 +68,17 @@ h1 {
   margin-bottom: 4rem;
 }
 
+.skill_item i {
+  font-size: 3rem;
+  color: #7aa2f7;
+}
+
+.skill_item div {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and text */
+}
+
 .skills {
   padding-left: 20%;
   padding-right: 20%;
@@ -81,7 +92,7 @@ h1 {
 }
 
 .skill_name {
-  color: #7aa2f7;
+  color: #c0caf5;
 }
 
 .skill_level {
