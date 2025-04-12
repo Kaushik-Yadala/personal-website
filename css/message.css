@@ -155,3 +155,9 @@ a:visited {
 .footer-text {
   font-size: 1.25rem;
 }
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #1a1b26; /* Tokyo Night background */
+  }
+}
