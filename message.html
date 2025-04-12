@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Message</title>
+    <link rel="stylesheet" href="css/message.css" />
+    <link rel="icon" type="image/svg" href="assets/images/icon.svg" />
+    <script
+      src="https://kit.fontawesome.com/03b97ed0d3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <header class="site-header">
+    <nav class="nav-bar">
+      <div class="icon">
+        <a href="index.html">
+          <img src="assets/images/icon.svg" alt="Icon" href="" />
+        </a>
+      </div>
+      <div class="nav-buttons">
+        <a href="index.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="skills.html">Technical Skills</a>
+        <a href="assets/resume.pdf">CV</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="message.html">Text Analyzer</a>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <div class="counter">
+      <form>
+        <h1>Text Analyzer:</h1>
+        <textarea id="text_box" name="message" rows="25"></textarea>
+        <br />
+      </form>
+      <div class="info">
+        <div>
+          <h2>Counts:</h2>
+          <div id="letters">
+            <p>Letters: 0</p>
+          </div>
+          <div id="words">
+            <p>Words: 0</p>
+          </div>
+          <div id="spaces">
+            <p>Spaces: 0</p>
+          </div>
+          <div id="newlines">
+            <p>Newlines: 0</p>
+          </div>
+          <div id="special">
+            <p>Special Symbols: 0</p>
+          </div>
+        </div>
+        <div id="pronouns">
+          <h2>Pronouns:</h2>
+          <p></p>
+        </div>
+        <div id="prepositions">
+          <h2>Prepositions:</h2>
+          <p></p>
+        </div>
+        <div id="articles">
+          <h2>Indefinite<br />Articles:</h2>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer class="site-footer">
+    <div class="footer-text">Connect:</div>
+    <a href="https://github.com/Kaushik-Yadala" target="_blank">
+      <i class="fa-brands fa-github footer-icon"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/kaushik-yadala" target="_blank">
+      <i class="fa-brands fa-linkedin footer-icon"></i>
+    </a>
+    <a href="mailto:yadala.k1@gmail.com" aria-label="Email">
+      <i class="fa-solid fa-envelope footer-icon"></i>
+    </a>
+  </footer>
+  <script src="js/message.js"></script>
+  <script src="js/event_logger.js"></script>
+</html>

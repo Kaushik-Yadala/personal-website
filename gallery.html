@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="css/gallery.css" />
+    <link rel="icon" type="image/svg" href="assets/images/icon.svg" />
+    <script
+      src="https://kit.fontawesome.com/03b97ed0d3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <header class="site-header">
+    <nav class="nav-bar">
+      <div class="icon">
+        <a href="index.html">
+          <img src="assets/images/icon.svg" alt="Icon" href="" />
+        </a>
+      </div>
+      <div class="nav-buttons">
+        <a href="index.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="skills.html">Technical Skills</a>
+        <a href="assets/resume.pdf">CV</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="message.html">Text Analyzer</a>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <div class="gallery-wrapper">
+      <h1 class="gallery-title">My Hometown: Giddalur</h1>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/images/img1.jpg" alt="Gallery Image 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/img2.jpg" alt="Gallery Image 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/img3.png" alt="Gallery Image 3" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/img4.jpg" alt="Gallery Image 4" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/img5.jpeg" alt="Gallery Image 5" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/img6.jpeg" alt="Gallery Image 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/img7.jpeg" alt="Gallery Image 7" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/img8.jpg" alt="Gallery Image 8" />
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/img9.jpg" alt="Gallery Image 9" />
+        </div>
+        <!-- Add more images as needed -->
+      </div>
+    </div>
+    <script>
+      const galleryItems = document.querySelectorAll(".gallery-item");
+
+      const revealOnScroll = () => {
+        const triggerBottom = window.innerHeight * 0.9;
+
+        galleryItems.forEach((item) => {
+          const itemTop = item.getBoundingClientRect().top;
+
+          if (itemTop < triggerBottom) {
+            item.classList.add("show");
+          }
+        });
+      };
+
+      // Run on scroll and on initial load
+      window.addEventListener("scroll", revealOnScroll);
+      window.addEventListener("load", revealOnScroll);
+    </script>
+  </body>
+  <footer class="site-footer">
+    <div class="footer-text">Connect:</div>
+    <a href="https://github.com/Kaushik-Yadala" target="_blank">
+      <i class="fa-brands fa-github footer-icon"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/kaushik-yadala" target="_blank">
+      <i class="fa-brands fa-linkedin footer-icon"></i>
+    </a>
+    <a href="mailto:yadala.k1@gmail.com" aria-label="Email">
+      <i class="fa-solid fa-envelope footer-icon"></i>
+    </a>
+  </footer>
+  <script src="js/event_logger.js"></script>
+</html>

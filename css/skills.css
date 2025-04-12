@@ -1,0 +1,234 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #1a1b26; /* Tokyo Night background */
+  color: #c0caf5; /* Tokyo Night foreground */
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+/* === Header Container === */
+.site-header {
+  background-color: #1a1b26; /* Tokyo Night background */
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #565f89;
+}
+
+.site-header {
+  background-color: #1a1b26;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #565f89;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-buttons a {
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: transparent;
+  color: #c0caf5;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.nav-buttons a:hover {
+  background-color: #ff9e64;
+  color: #1a1b26;
+  font-weight: 900;
+}
+
+.nav-buttons a:active {
+  background-color: #e68a4f;
+}
+
+.icon img {
+  height: 32px;
+  width: 32px;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.skills {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.skill_item {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.skill_name {
+  color: #7aa2f7;
+}
+
+.skill_level {
+  color: #ff9e64;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #565f89;
+  border-radius: 1000px;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 0%;
+  height: 20px;
+  background-color: #ff9e64;
+  border-radius: 1000px;
+  animation-duration: 0.7s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+/* tedious part of adding every single skill animation */
+
+li.html::after,
+li.bash::after,
+li.git::after,
+li.python::after {
+  animation-name: html;
+}
+
+@keyframes html {
+  to {
+    width: 90%;
+  }
+}
+
+li.css::after,
+li.seaborn::after,
+li.sciPy::after {
+  animation-name: css;
+}
+
+@keyframes css {
+  to {
+    width: 60%;
+  }
+}
+
+li.JS::after {
+  animation-name: js;
+}
+
+@keyframes js {
+  to {
+    width: 50%;
+  }
+}
+
+li.C::after {
+  animation-name: C;
+}
+
+@keyframes C {
+  to {
+    width: 90%;
+  }
+}
+
+li.fast::after {
+  animation-name: fast;
+}
+
+@keyframes fast {
+  to {
+    width: 70%;
+  }
+}
+
+li.Cpp::after,
+li.sql::after,
+li.mongo::after {
+  animation-name: Cpp;
+}
+
+@keyframes Cpp {
+  to {
+    width: 80%;
+  }
+}
+
+li.seaborn::after,
+li.scipy::after,
+li.numpy::after,
+li.pandas::after {
+  animation-name: seaborn;
+}
+
+@keyframes seaborn {
+  to {
+    width: 40%;
+  }
+}
+
+.site-footer {
+  background-color: #1a1b26;
+  border-top: 1px solid #565f89;
+  margin-top: 1rem;
+  padding: 0.25rem 0.25rem;
+  color: #c0caf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icon {
+  padding: 10px;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #ff9e64;
+}
+
+a:link,
+a:visited {
+  color: #c0caf5;
+}
+
+.footer-text {
+  font-size: 1.25rem;
+}
+
+/* Auto dark mode fallback (optional, since base is dark) */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f0f0f0;
+    color: #1a1b26;
+  }
+}

@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #1a1b26; /* Tokyo Night background */
+  color: #c0caf5; /* Tokyo Night foreground */
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+.information {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.image_wrapper {
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: 8px;
+  /* border-style: solid; */
+  /* border-width: 5px; */
+  border-color: #c0caf5;
+}
+
+.image_wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease-in-out;
+  object-fit: contain;
+}
+
+.image_wrapper:hover img {
+  transform: scale(1.2);
+}
+
+.paragraph {
+  flex: 1 1 300px;
+  min-width: 0;
+  font-size: 1.5rem;
+}
+
+/* === Header Container === */
+.site-header {
+  background-color: #1a1b26; /* Tokyo Night background */
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #565f89;
+}
+
+.site-header {
+  background-color: #1a1b26;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #565f89;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-buttons a {
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: transparent;
+  color: #c0caf5;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.nav-buttons a:hover {
+  background-color: #ff9e64;
+  color: #1a1b26;
+  font-weight: 900;
+}
+
+.nav-buttons a:active {
+  background-color: #e68a4f;
+}
+
+.icon img {
+  height: 32px;
+  width: 32px;
+}
+
+/* other styles*/
+.everything {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.wrapper {
+  margin-top: 15%;
+  margin-bottom: 15%;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typewriter {
+  display: flex;
+}
+
+.typewriter .static {
+  color: #c0caf5;
+  font-size: 7rem;
+  font-weight: 500;
+}
+
+.typewriter .dynamic {
+  margin-left: 25px;
+  line-height: 90px;
+  height: 90px;
+  overflow: hidden;
+}
+
+.dynamic li {
+  position: relative;
+  font-weight: 500;
+  list-style: none;
+  color: #ff9e64;
+  font-size: 7rem;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+.dynamic li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #1a1b26;
+  border-left: 2px solid #ff9e64;
+  animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
+.site-footer {
+  background-color: #1a1b26;
+  border-top: 1px solid #565f89;
+  margin-top: 1rem;
+  padding: 0.25rem 0.25rem;
+  color: #c0caf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icon {
+  padding: 10px;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #ff9e64;
+}
+
+a:link,
+a:visited {
+  color: #c0caf5;
+}
+
+.footer-text {
+  font-size: 1.25rem;
+}
+
+/* Auto dark mode fallback (optional, since base is dark) */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f0f0f0;
+    color: #1a1b26;
+  }
+}

@@ -1,0 +1,319 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #1a1b26; /* Tokyo Night background */
+  color: #c0caf5; /* Tokyo Night foreground */
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* === Header Container === */
+.site-header {
+  background-color: #1a1b26; /* Tokyo Night background */
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #565f89;
+}
+
+.site-header {
+  background-color: #1a1b26;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #565f89;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-buttons a {
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: transparent;
+  color: #c0caf5;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.nav-buttons a:hover {
+  background-color: #ff9e64;
+  color: #1a1b26;
+  font-weight: 900;
+}
+
+.nav-buttons a:active {
+  background-color: #e68a4f;
+}
+
+.icon img {
+  height: 32px;
+  width: 32px;
+}
+
+.education-timeline {
+  padding: 4rem 5%;
+  background-color: #1a1b26;
+  color: #c0caf5;
+  font-family: "Courier New", monospace;
+}
+
+.timeline-title,
+.achievements-title {
+  font-size: 4rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.timeline-line {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.timeline-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: #7aa2f7;
+}
+
+.timeline-item {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.timeline-item.left .timeline-content {
+  text-align: left;
+  margin-right: auto;
+  margin-left: 0;
+  padding-right: 2rem;
+}
+
+.timeline-item.right .timeline-content {
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+  padding-left: 2rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: #ff9e64;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-content {
+  background-color: #24283b;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 360px;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: scale(1.02);
+}
+
+.timeline-content h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #7aa2f7;
+}
+
+.timeline-content h3 {
+  margin: 0.3rem 0;
+  font-size: 1.1rem;
+  color: #c0caf5;
+}
+
+.timeline-content p {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: #a9b1d6;
+}
+
+@media (max-width: 768px) {
+  .timeline-line::before {
+    left: 12px;
+  }
+
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    text-align: left;
+    padding-left: 2.5rem;
+    padding-right: 0;
+    margin: 0;
+  }
+
+  .timeline-dot {
+    left: 12px;
+  }
+}
+.achievements-section {
+  padding: 4rem 5%;
+  background-color: #1a1b26;
+  color: #c0caf5;
+  font-family: "Courier New", monospace;
+}
+
+/* .achievements-title { */
+/*   text-align: center; */
+/*   font-size: 2.5rem; */
+/*   margin-bottom: 3rem; */
+/*   color: #7aa2f7; */
+/* } */
+
+.achievements-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.achievement-card {
+  background-color: #24283b;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 360px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: scale(1.03);
+}
+
+.achievement-card h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #7aa2f7;
+}
+
+.achievement-card h3 {
+  margin: 0.3rem 0;
+  font-size: 1.1rem;
+  color: #c0caf5;
+}
+
+.achievement-card p {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: #a9b1d6;
+}
+
+.site-footer {
+  background-color: #1a1b26;
+  border-top: 1px solid #565f89;
+  margin-top: 1rem;
+  padding: 0.25rem 0.25rem;
+  color: #c0caf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icon {
+  padding: 10px;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #ff9e64;
+}
+
+a:link,
+a:visited {
+  color: #c0caf5;
+}
+
+.footer-text {
+  font-size: 1.25rem;
+}
+/* Initial hidden states */
+.hidden-left,
+.hidden-right,
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+/* Specifically for timeline items */
+.hidden-left {
+  transform: translateX(-50px);
+}
+
+.hidden-right {
+  transform: translateX(50px);
+}
+
+/* Shown state */
+.show {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+.achievement-card {
+  transition:
+    transform 0.4s ease,
+    opacity 0.6s ease;
+}
+
+.achievement-card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.achievement-card:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.achievement-card:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.achievement-card:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+/* Auto dark mode fallback (optional, since base is dark) */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f0f0f0;
+    color: #1a1b26;
+  }
+}
