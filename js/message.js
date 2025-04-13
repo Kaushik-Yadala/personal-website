@@ -59,7 +59,7 @@ text_box.addEventListener("input", function () {
   // special symbols
   // As numbers are not specifically asked, they are being included as part of the special symbols, basically everything that has not has been counted before will be a part of this count
 
-  let sRegex = /[a-zA-z \n]/g;
+  let sRegex = /[a-zA-z0-9 \n]/g;
   let sDiv = document.getElementById("special");
   let ssP = sDiv.getElementsByTagName("p");
 
