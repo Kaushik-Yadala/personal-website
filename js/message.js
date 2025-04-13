@@ -24,6 +24,16 @@ text_box.addEventListener("input", function () {
     lP[0].innerText = `Letters: 0`;
   }
 
+  let numberRegex = /[0-9]/g;
+  let numberDiv = document.getElementById("numbers");
+  let nuP = numberDiv.getElementsByTagName("p");
+
+  try {
+    nuP[0].innerText = `Numbers: ${text.match(numberRegex).length}`;
+  } catch (err) {
+    nuP[0].innerText = `Numbers: 0`;
+  }
+
   // getting the space count
   let spaceRegex = / /g;
   let spaceDiv = document.getElementById("spaces");
